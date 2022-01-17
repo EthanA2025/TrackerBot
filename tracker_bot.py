@@ -3,6 +3,12 @@ from discord.ext import commands
 from discord.ext.commands import UserConverter
 import json
 
+''' 
+TrackerBot v1 
+author @EthanA2025 / Ethan Abbate
+A simple discord bot that tracks score 
+'''
+
 TOKEN = '' # discord token
 client = commands.Bot(command_prefix= "*") # All the commands for this bot starts with a "*"
 
@@ -29,8 +35,8 @@ async def _add(ctx, name: discord.User):
 # Prints the scoreboard out
 @client.command()
 async def scoreboard(ctx):
-    with open('tracker.json', 'r') as file:
-        json.load(file)
+    with open('tracker.json') as file:
+        data = json.load(file)
     message = ''
     # Message will be the string in the format: Discord user name, score and a newline for each user
     for key, value in data.items():
