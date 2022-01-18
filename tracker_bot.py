@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from discord.ext.commands import UserConverter
+from discord.ext.commands import MemberConverter
 import json
 
 ''' 
@@ -8,11 +8,6 @@ TrackerBot v1
 author @EthanA2025 / Ethan Abbate
 A simple discord bot that tracks score 
 '''
-
-import discord
-from discord.ext import commands
-from discord.ext.commands import MemberConverter
-import json
 
 TOKEN = '' # discord token
 client = commands.Bot(command_prefix= "*") # All the commands for this bot starts with a "*"
